@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import { Container } from './styled-components/Grid'
+import PokesDek from './pages/PokesDek'
+import PokeDetails from './pages/PokeDetails'
+import NoMatch from './pages/NoMatch'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Routes>
+        <Route path="/" element={<PokesDek />} />
+        <Route path='/poke/:id' element={<PokeDetails />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
+    </Container>
   );
 }
 
