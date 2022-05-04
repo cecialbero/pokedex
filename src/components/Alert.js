@@ -1,6 +1,8 @@
-const Alert = () => {
+import { AlertMsg } from '../styled-components/AlertMsg'
+
+const Alert = ({msg, type}) => {
   return (
-    <div>Ups, there is an error. Try again later</div>
+    <AlertMsg type={type}>{msg}</AlertMsg>
   )
 }
 

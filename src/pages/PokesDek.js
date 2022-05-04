@@ -44,7 +44,7 @@ const PokesDek = () => {
     }
 
     if(error) {
-        return <Alert />
+        return <Alert msg="Ups, looks like we couldn't catch any Pokemon. Try later" type='error' />
     }
 
     return (
