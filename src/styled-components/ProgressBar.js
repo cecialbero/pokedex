@@ -18,6 +18,9 @@ export const ProgressBarValue = styled.div`
     height: 20px;
     background-color: #82c6eb;
     border-right: 1px solid #000;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
 `
 
 export const ProgressBarLabel = styled.h3`

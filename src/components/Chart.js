@@ -5,7 +5,7 @@ const Chart = ({value, label}) => {
         <ProgressBar>
             <ProgressBarLabel>{label}</ProgressBarLabel>
             <ProgressBarBar>
-                <ProgressBarValue style={{width: `${value * 100 / 100}%`}}></ProgressBarValue>
+                <ProgressBarValue style={{width: `${value * 100 / 110}%`}}>{value}</ProgressBarValue>
             </ProgressBarBar>
         </ProgressBar>
     )
