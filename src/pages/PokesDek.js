@@ -56,7 +56,7 @@ const PokesDek = () => {
                         {pokes.map((poke, index) => <PokeCard key={index} poke={poke} />)}
                     </CardGroup>
             }
-            <ButtonGroup centered>
+            <ButtonGroup centered className='mt-30'>
                 <Button onClick={() => goToPage(previous)} disabled={!previous}>Previous</Button>
                 <Button onClick={() => goToPage(next)} disabled={!next}>Next</Button>
             </ButtonGroup>

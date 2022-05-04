@@ -10,7 +10,7 @@ export const Board = styled.article`
     h2 {
         text-align: center;
         font-size: 40px;
-        margin: 0 0 30px;
+        margin: 0 0 20px;
         text-transform: uppercase;
     }
 `
