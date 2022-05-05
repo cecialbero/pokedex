@@ -1,4 +1,4 @@
-import { ProgressBar, ProgressBarBar, ProgressBarValue, ProgressBarLabel } from '../styled-components/ProgressBar'
+import { ProgressBar, ProgressBarLabel } from '../styled-components/ProgressBar'
 
 const Chart = ({value, label}) => {
     return (
