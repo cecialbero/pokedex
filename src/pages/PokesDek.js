@@ -4,6 +4,7 @@ import Loader from '../components/Loader'
 import PokeCard from '../components/PokeCard'
 import { CardGroup } from '../styled-components/Card'
 import { Button, ButtonGroup } from '../styled-components/Button'
+import { Container } from '../styled-components/Grid'
 
 const PokesDek = () => {
     const [pokes, setPokes] = useState([])
@@ -48,7 +49,7 @@ const PokesDek = () => {
     }
 
     return (
-        <>
+        <Container mxWidth={'1100px'}>
             {
                 loading
                 ?   <Loader />
@@ -60,7 +61,7 @@ const PokesDek = () => {
                 <Button onClick={() => goToPage(previous)} disabled={!previous}>Previous</Button>
                 <Button onClick={() => goToPage(next)} disabled={!next}>Next</Button>
             </ButtonGroup>
-        </>
+        </Container>
     )
 }
 

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const Container = styled.section`
-    max-width: 1200px;
+    max-width: ${(props) => props.mxWidth};
     width: 100%;
     margin: 30px auto;
     padding: 10px;

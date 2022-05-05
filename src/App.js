@@ -1,18 +1,15 @@
 import { Routes, Route } from 'react-router-dom'
-import { Container } from './styled-components/Grid'
 import PokesDek from './pages/PokesDek'
 import PokeDetails from './pages/PokeDetails'
 import NoMatch from './pages/NoMatch'
 
 function App() {
   return (
-    <Container>
       <Routes>
         <Route path="/" element={<PokesDek />} />
         <Route path='/poke/:id' element={<PokeDetails />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
-    </Container>
   );
 }
 

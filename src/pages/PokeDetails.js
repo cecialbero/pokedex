@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Board, BoardFigure } from '../styled-components/Board'
 import { Button } from '../styled-components/Button'
-import { Row, Column } from '../styled-components/Grid'
+import { Container, Row, Column } from '../styled-components/Grid'
 import Loader from '../components/Loader'
 import Alert from '../components/Alert'
 import Chart from '../components/Chart'
@@ -43,7 +43,7 @@ const PokeDetails = () => {
   const { name, sprites, stats } = poke
 
   return (
-    <>
+    <Container mxWidth={'1000px'}>
       {
         loading
         ? <Loader />
@@ -70,7 +70,7 @@ const PokeDetails = () => {
             </Button>
           </>
       }
-    </>
+    </Container>
   )
 }
 
