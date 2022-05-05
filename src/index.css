@@ -56,3 +56,16 @@ progress {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+/*No Match*/
+.no-match {
+  text-align: center;
+}
+
+.no-match article {
+  padding: 80px 0;
+}
+
+.no-match button {
+  margin-left: 10px;
+}
