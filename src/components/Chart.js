@@ -4,9 +4,7 @@ const Chart = ({value, label}) => {
     return (
         <ProgressBar>
             <ProgressBarLabel>{label}</ProgressBarLabel>
-            <ProgressBarBar>
-                <ProgressBarValue style={{width: `${value * 100 / 110}%`}}>{value}</ProgressBarValue>
-            </ProgressBarBar>
+            <progress value={value} max="110"><span>{value}</span></progress>
         </ProgressBar>
     )
 }

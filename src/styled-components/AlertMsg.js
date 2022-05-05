@@ -22,13 +22,14 @@ const handleColor = type => {
     }
 }
 
-export const AlertMsg = styled.div`
+export const AlertMsg = styled.dialog`
     position: absolute;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
     padding: 20px;
+    margin: 0;
     min-width: 200px;
     font-weight: bold;
     background: ${({type}) => handleBackgroundColor(type)};

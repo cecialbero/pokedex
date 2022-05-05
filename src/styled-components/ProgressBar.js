@@ -6,14 +6,6 @@ export const ProgressBar = styled.div`
     justify-content: flex-start
 `
 
-export const ProgressBarBar = styled.div`
-    height: 20px;
-    width: 100%;
-    border: 2px solid #000;
-    margin-bottom: 20px;
-    background-color: #f5f5f5;
-`
-
 export const ProgressBarValue = styled.div`
     height: 20px;
     background-color: #82c6eb;
