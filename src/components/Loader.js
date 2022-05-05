@@ -2,7 +2,7 @@
 const Loader = ({msg = ''}) => {
   return (
     <div className='loader'>
-        <img src='/img/pokeball.gif' alt='a moving pokeball' width='80'/>
+        <img src='/img/pokeball.gif' alt='moving pokeball' width='80'/>
         <p>{msg}</p>
     </div>
   )
