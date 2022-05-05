@@ -1,6 +1,10 @@
-const Loader = () => {
+
+const Loader = ({msg = ''}) => {
   return (
-    <div>Catching Pokemons...</div>
+    <div className='loader'>
+        <img src='/img/pokeball.gif' alt='a moving pokeball' width='80'/>
+        <p>{msg}</p>
+    </div>
   )
 }
 

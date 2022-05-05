@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import Chart from '../components/Chart'
+import Loader from '../components/Loader'
 import { Board, BoardFigure } from '../styled-components/Board'
 import { Button } from '../styled-components/Button'
 import { Container, Row, Column } from '../styled-components/Grid'
-import Loader from '../components/Loader'
-import Alert from '../components/Alert'
-import Chart from '../components/Chart'
+import { Alert } from '../styled-components/Alert'
 
 const PokeDetails = () => {
   const { id } = useParams()
@@ -37,7 +37,7 @@ const PokeDetails = () => {
   }
 
   if(error) {
-    return <Alert />
+    return <Alert type={'error'}>Ups, looks like we couldn't catch any Pokemon. Try later</Alert>
   }
 
   const { name, sprites, stats } = poke

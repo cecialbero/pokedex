@@ -22,7 +22,7 @@ const handleColor = type => {
     }
 }
 
-export const AlertMsg = styled.dialog`
+export const Alert = styled.dialog`
     position: absolute;
     top: 50px;
     left: 50%;
