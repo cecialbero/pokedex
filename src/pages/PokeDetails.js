@@ -1,5 +1,5 @@
+import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useQuery } from 'react-query'
 import Chart from '../components/Chart'
 import Loader from '../components/Loader'
 import { Board, BoardFigure } from '../styled-components/Board'
@@ -11,25 +11,40 @@ const PokeDetails = () => {
   const { id } = useParams()
   const navigate = useNavigate()
 
-  const { isLoading, error, data } = useQuery('pokeApi', () => 
-    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(res => 
-      res.json()
-    )
-  )
+  const [poke, setPoke] = useState({})
+  const [isLoading, setIsLoading] = useState(true)
+  const [isError, setIsError] = useState(false)
+
+  const getPoke = async id => {
+    try {
+      setIsLoading(true)
+      let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+      let data = await res.json()
+      setPoke(data)
+    } catch(err) {
+      setIsError(err)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    getPoke(id)
+  }, [id])
 
   if(isLoading) {
     return <Loader />
   }
 
-  if(error) {
+  if(isError) {
     return <Alert type={'error'}>Ups, looks like we couldn't catch any Pokemon. Try later</Alert>
   }
+
+  const { name, stats, sprites } = poke
 
   const handleReturn = () => {
       navigate( -1 );
   }
-
-  const { name, stats, sprites } = data
 
   return (
     <Container mxWidth={'1000px'}>
